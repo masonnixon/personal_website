@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>SATELLITE SUBSYSTEMS</title>
+
+	<link rel="stylesheet" type="text/css" href="../../layout/style.css">
+	<link rel="stylesheet" href="../../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../js/prototype.js"></script>
+	<script type="text/javascript" src="../../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../../js/lightbox.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a>Earth Station Design</a>
+					<ul>
+						<li><a href="../../esd/collector.html">Overview</a></li>
+						<li><a href="../../esd/design.html">Design</a></li>
+						<li><a href="../../esd/safety.html">Safety</a></li>
+						<li><a href="../../esd/link.html">Link Budget</a></li>
+						<li><a href="../../esd/rectenna.html">Rectenna Efficiencies</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a class="active">The Satellites</a>
+					<ul>
+						<li><a href="../../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../../sat/environment.html">Space Environment</a></li>
+						<li><a href="../../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../../comms/communications.html">Overview</a></li>
+						<li><a href="../../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>ADACs</h1>
+
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							
+							<p>
+								The attitude determination and control system (ADACs) is responsible for measurement 
+								and control of the satellite attitude. This is particularly important for a space solar 
+								power system due to the need to maintain the orientation of the solar panels orthogonal 
+								to solar radiation and the need to accurately point the transmitting dish at the 
+								desired ground station. If the solar panels were to change attitude with respect to the 
+								Sun significantly, the amount of power collected would drop off rapidly. Maintenance of 
+								the attitude is a challenging issue for this system due to the sheer size of the solar 
+								panels and the resulting large aerodynamic forces and moments of inertia.
+							</p>
+							
+							<p>
+								As mentioned on the <a href="../orbit.html">orbital parameter page</a>, the orbit was 
+								chosen to be sun synchronous in order to maintain the angle of the orbit with respect 
+								to the Sun, as shown below. With such an orbit, the solar panels would constantly point 
+								at the Sun if they were free of any perturbations.
+							</p>
+							
+							<div style="float:left;" class="figure">
+								<a href="./res/FigureS1.jpg" rel="lightbox" 
+									title="Figure S1. Sun-synchronous orbit showing constant orientation with respect to Sun (from www.spaceyuga.com)">
+									<img class="figure" src="./res/FigureS1.jpg" /></a>
+								<p>
+									Figure S1. Sun-synchronous orbit showing constant orientation with respect to Sun (from www.spaceyuga.com)
+								</p>
+							</div>
+							
+							<p>
+								The primary perturbation torques on such a satellite are due to aerodynamic, gravitational,
+								solar radiation, and magnetic forces. These forces are often unpredictable in nature, 
+								though relatively small in magnitude. Upper and lower bounds on the resulting torques may 
+								be calculated to find the maximum and minimum levels of torque that must be exerted by 
+								the attitude controllers.
+							</p>
+									
+							<p>
+								Due to the fact that the torques are relatively small at any given time, but must be accounted 
+								for frequently to avoid significant change in attitude with respect with the Sun, a 
+								magnetoplasmadynamic (MPD) thruster system was chosen. Electrical and magnetic thruster systems 
+								are only capable of low thrust with respect to a chemical rocket, but they are much more mass 
+								efficient, with a specific impulse approximately ten times greater than that of a chemical 
+								rocket. Multiple MPD thrusters will be placed along the dark side of the solar panels, far 
+								from the center of mass of the satellite to maximize the moment arm and therefore the torque.
+							</p>
+							
+							
+							<div style="float:right;" class="figure">
+								<a href="./res/FigureS2.jpg" rel="lightbox" 
+									title="Figure S2. Star tracker (left) and Sun sensor (right) (from www.spaceyuga.com)">
+									<img class="figure" src="./res/FigureS2.jpg" /></a>
+								<p>
+									Figure S2. Star tracker (left) and Sun sensor (right) (from www.spaceyuga.com)
+								</p>
+							</div>
+							
+							<p>
+								The second consideration for ADACs is the measurement of the attitude of the satellite. 
+								Multiple Sun sensors will be placed along the light-facing side of the solar panels, 
+								allowing the satellite to detect if the panels are orthogonal to the incoming solar 
+								radiation to within 0.01 degrees. A star tracker will be used to determine the absolute 
+								attitude of the main body of the satellite, allowing it to accurately point the transmitting 
+								dish at the ground station. This configuration was chosen as Sun sensors are relatively 
+								inexpensive as compared to star trackers, and provide the most relevant information 
+								necessary for the accurate pointing of the solar panels. The star tracker is necessary 
+								for the transmitter dish pointing, however, as there is no less expensive solution for the 
+								level of precision needed for the dish pointing (precision greater than two arc seconds).
+							</p>
+							
+						</div>
+						<div id="pager"></div>
+						
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="../hardware.html">Overview</a></li>
+						<li><a id="active" href="./ADAC.html">ADACs</a></li>
+						<li><a href="./keeping.html">Station Keeping</a></li>
+						<li><a href="./thermal.html">Thermal</a></li>
+						<li><a href="./power.html">Power</a></li>
+						<li><a href="./GNC.html">Guidance, Navigation, and Control</a></li>
+						<li><a href="./References.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li>|<a href="../../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../../comms/communications.html">Communications</a></li>
+					<li>|<a href="../../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

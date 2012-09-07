@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>EFFECTS ON HARDWARE</title>
+	<link rel="stylesheet" type="text/css" href="../../layout/style.css">
+	<link rel="stylesheet" href="../../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../js/prototype.js"></script>
+	<script type="text/javascript" src="../../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../../js/lightbox.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a>Earth Station Design</a>
+					<ul>
+						<li><a href="../../esd/collector.html">Overview</a></li>
+						<li><a href="../../esd/design.html">Design</a></li>
+						<li><a href="../../esd/safety.html">Safety</a></li>
+						<li><a href="../../esd/link.html">Link Budget</a></li>
+						<li><a href="../../esd/rectenna.html">Rectenna Efficiency</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a class="active">The Satellites</a>
+					<ul>
+						<li><a href="../../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../../sat/environment.html">Space Environment</a></li>
+						<li><a href="../../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../../comms/communications.html">Overview</a></li>
+						<li><a href="../../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>EFFECTS ON HARDWARE</h1>
+
+
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							<h2>Major Concerns</h2>
+							<p>
+								Two types of space radiation are of particular concern for spacecraft electronics designers. The first, 
+								known as the total ionizing dose, represents the cumulative effect of many ionized particles hitting a 
+								device throughout the course of its mission life, slowly degrading the device until it ultimately fails. 
+								The second involves high-energy particles that penetrate deep into materials and components, leaving a 
+								temporary trail of free charge carriers in their path. If these particles hit sensitive nodes in the circuit, 
+								they can produce adverse effects, generically described as "single-event effects."
+							</p>
+							<p>
+								One type of electronic component often found aboard a satellite is the complementary metal-oxide semiconductor 
+								(CMOS) integrated circuit. CMOS devices use the simultaneous flow of both electron and hole currents through 
+								transistors and logic gates. The transistors that carry these negative and positive currents need to be 
+								isolated from each other; this is where space radiation can interfere.
+							</p>
+							
+							<h2>Total Dose Effects</h2>
+							<p>
+								Total dose refers to the integrated radiation dose that is accrued by satellite electronics over a certain 
+								period of time, usually over a 1 year period, or over the satellite mission lifetime. The radiation has the 
+								capability to damage materials due to its ability to ionize material. The energetic ions then can cause 
+								damage to materials by breaking and/or rearranging atomic bonds. After exposure to sufficient total-dose 
+								radiation, most insulating materials such as capacitor dielectrics, circuit-board materials, and cabling 
+								insulators become less insulating or become more electrically leaky. Certain conductive materials, such as 
+								metal-film resistors, can change their characteristics under exposure to total-dose radiation. Semiconductor 
+								devices in particular exhibit a number of effects. It is important to choose materials and components for 
+								satellite electronics that have the necessary radiation tolerance for the required mission. It is also 
+								necessary to design in margins or allowances for the expected component changes induced by the radiation 
+								environment.
+							</p>
+							
+							<center><div class="figure">
+								<a href="./res/FigureE8.png" rel=lightbox title="Figure E8">
+								<img class="figure" src="./res/FigureE8.png" /></a>
+							</div>
+							<div style="color: #48DAC1;">
+								<p>
+									Figure E8: Charge buildup affects the current-voltage characteristics of the 
+									transistors used in semiconductor circuits. Proper operation of a transistor relies on the ability to 
+									switch it from a low-conductance (off) state to a high-conductance (on) state as the gate voltage passes 
+									through a threshold. Extended exposure to radiation can shift the threshold voltages (top image), making the transistors easier or harder to switch. Radiation may also increase the leakage current (bottom image), causing the on and off states of the transistors to become less distinguishable. Either effect can ultimately cause circuit failure.
+								</p>
+							</div></center>
+							
+							<p>
+								As commercial CMOS processes have advanced, the inherent radiation resistance of these devices has improved&#8212;and 
+								thus, the Rad Harden By Design (RHBD) approach has become possible. The current that flows through CMOS 
+								transistors is governed by a low-voltage gate over each device, isolated by a layer of oxide. These insulating 
+								layers can develop a charge after long exposure to ionizing radiation, and this charge can affect the flow of 
+								current through the device; but as circuits have shrunk, the thicknesses of these insulating layers have 
+								decreased, presenting less opportunity for charge buildup.
+							</p>
+							<p>
+								More problematic are the radiation-induced increases in leakage current&#8212;that is unregulated current flowing 
+								across unintended areas of the semiconductor. When leakage current bypasses the transistor's isolated regions, 
+								it degrades the distinguishability of the transistor's "on" and "off" states. Leakage also increases the 
+								circuit's background current, or the amount of current flowing when the device is in a quiescent state. 
+								Such an increase, multiplied by the tens of millions of switches in each circuit, can drive up power 
+								consumption, increasing heat-dissipation needs and prematurely draining the power source of the satellite. 
+								In an extreme case, the isolation between discrete components can also be lost, rendering the circuit useless.
+							</p>
+							
+							<p>
+								First the gate oxide becomes ionized by the dose it absorbs. The free electrons and holes drift under the 
+								influence of the electric field that is induced in the oxide by the gate voltage. These holes and electrons 
+								would be fairly benign if they were to simply able to drift out of the oxide, but although the electrons are 
+								fairly mobile, the holes are not. A small fraction of them become trapped in the gate oxide. After sufficient 
+								radiation dose, a large positive charge builds up on this gate oxide, having the same effect as if a positive 
+								voltage were applied to the gate. With enough total dose, the device turns on even if no control voltage is 
+								applied. The transistor source-drain current can no longer be controlled by the gate and remains on permanently. 
+								PMOS transistor experiences a similar but opposite condition where the state is trapped in a continuous off 
+								state. The &#8220;ON&#8221; and &#8220;OFF&#8221; states in the digital world are &#8220;1&#8221; or &#8220;0&#8221; and with accumulated dose will cease to 
+								function.
+							</p>
+							
+							<p>
+								A similar effect can occur in a single transistor. Trapped charges in the field oxide form a leakage path along 
+								the edges parallel to normal conduction flow in an NMOS transistor. The silicon along these edges forms an 
+								unwanted conduction path. In modern CMOS devices, edge leakage is frequently the dominant mode limiting the 
+								total-dose hardness of the product. After a high total dose, the transistors cumulatively leak so much current 
+								that the power supply can no longer handle the load. The power dissipation rises to high levels, and the chip 
+								fails. A hardened field oxide is usually required to help prevent this occurrence.
+							</p>
+
+							
+							
+							
+							<center>
+								<img class="nocaption" src="./res/FigureE9.gif" />
+								<div style="color: #48DAC1;">
+								<p>
+									Figure E9: Figure: Cross section of an NMOS transistor showing the gate oxide and conducting channel formed between the 
+									source and drain. The trapped charges shown in the inset are responsible for the threshold voltage shift, 
+									ultimately leading to failure.
+								</p>
+								</div>
+							</center>
+
+							<p>
+								The Aerospace Corporation has been testing the total-dose hardness of various commercially available CMOS 
+								manufacturing processes since 1995 by building test devices and irradiating them in a cobalt-60 radiation 
+								chamber. For example, The Aerospace Corporation and other companies have shown that total-dose effects can 
+								be mitigated by designing transistors in an enclosed shape, thereby eliminating the edges that can trigger 
+								current leakage along the borders of conventional transistors. Current flows from the center to the outside 
+								of these devices, making them immune to edge leakage current, but requiring a larger area for each transistor. 
+								Many commercial products lacking a hardened gate oxide (such as the processors used in desktop computers) 
+								might last a few days or weeks in a satellite orbit so this process would greatly benefit any space mission 
+								in orbit around earth.
+							</p>
+							
+							
+							<center><div class="figure">
+								<a href="./res/FigureE10.gif" rel=lightbox title="Figure E10">
+								<img class="figure" src="./res/FigureE10.gif" /></a>
+							</div>
+							<div style="color: #48DAC1;">
+								<p>
+									Figure E10: Edge-current leakage in transistors. Current should flow only between 
+									the source and the drain when the gate receives a proper voltage; however, after extended exposure to 
+									ionizing radiation, current can leak through at the edges, where the gate oxide and insulating field oxide 
+									meet.
+								</p>
+							</div></center>
+						</div>
+						<div id="pager"></div>
+						
+						
+						
+						
+						<div class="post">
+							<h2>Single-Event Effects</h2>
+							
+							<p>
+								Highly energetic ions such as cosmic rays can easily penetrate the structure of a spacecraft, pass through 
+								internal components, and exit the structure in a straight line. This single particle impact is often called 
+								a single-event effect. Shielding against them is simply not practical because of the ability for these 
+								particles to penetrate material. Because the heavy particles are omnidirectional, they impinge on an integrated 
+								circuit at random times and locations, with random angles of incidence.
+							</p>
+							
+							<p>
+								The concept of total ionizing dose is not useful to describe a single particle; instead, a quantity called the 
+								linear energy transfer is used. As the particle traverses the material of interest, it deposits energy along 
+								its path. Linear energy transfer is the amount of energy deposited per unit of distance traveled, normalized 
+								to the material's density. It is usually expressed in MeV-cm2/mg. A typical satellite environment will include 
+								a wide variety of particles with various amounts of kinetic energy corresponding to a wide spectrum of linear 
+								energy transfer.
+							<p>
+							
+							<p>
+								An energetic ion passes through a semiconductor device in a few picoseconds. As it does so, it leaves behind a 
+								"track" or column of ionized material typically ranging from a few tenths of a micron to a few microns in 
+								diameter. The ionized track contains equal numbers of electrons and holes and is therefore electrically neutral. 
+								The total number of charges is proportional to the linear energy transfer of the incoming particle. It is as if 
+								a conducting wire were suddenly inserted into the semiconductor device, disturbing the electric fields and 
+								normal current paths.
+							</p>
+							
+							<p>
+								If a cosmic ray passes through the drain region of an NMOS transistor, a short is momentarily created between 
+								the substrate (normally grounded) and the drain terminal (normally connected to a positive power supply voltage). 
+								If this happens, a spike of current flows for an instant at the event site. The amount of charge that is 
+								"collected" from the ion track before it dissipates or disappears by recombination is significant: Every 
+								device has a certain critical charge, which, if exceeded, results in a single-event upset, burnout, or other 
+								undesirable phenomenon.
+							</p>
+							
+							<p>
+								The process of energetic-ion-induced charge collection is complex and rapid, and is not completely understood. 
+								It consists in part of charge "funneling," where distortion of the normal electric field patterns of a device 
+								allows more charge to be collected than could normally be transported into the sensitive region. Charges are 
+								also pulled away from the drain-substrate junction by diffusion. The ability of a device to collect charge 
+								from the ion track determines its sensitivity to cosmic rays.
+							</p>
+							
+							<p>
+								If a device is large, it presents a greater target for cosmic rays. It is therefore more likely to receive a 
+								"hit" than a smaller device. In determining the sensitivity of a device to single-event effects, two important 
+								parameters to consider are the threshold linear energy transfer, above which upsets or single events are seen, 
+								and the saturation cross section. Researchers have identified various types of single-event effects, varying in 
+								their degree of seriousness.
+							</p>
+							
+							<center>
+								<img class="nocaption" src="./res/FigureE11.gif" />
+								<div style="color: #48DAC1;">
+								<p>
+									Figure E11: Latchup occurs when the source of one MOS transistor forges a pathway to the drain of another. A transient 
+									radiation pulse can generate the current needed to bridge this gap. Current will then continue to flow 
+									unregulated between the two components. The entire circuit must be powered down to break the connection. 
+									In some cases, the circuit may be permanently damaged.
+								</p>
+								</div>
+							</center>
+							
+							
+							<p>
+								A single-event transient, for example, is a temporary spike or signal caused by a heavy ion. In some cases, 
+								this spike can excite analog circuits into temporary or permanent oscillation. In digital circuits, the spike 
+								may propagate through many logic gates, causing system malfunction. In mixed-signal devices, a transient 
+								generated in the analog part of the device can propagate into the digital part, causing logic-level shifts.<br /><br />
+								A single-event upset usually manifests itself as a "bit-flip" or change of state in a logic circuit. If enough 
+								of these upsets occur, or if a single critical node is affected, a computer can freeze up and must be rebooted. 
+								Single-event upsets occur in computer memories, microprocessors, controllers, and almost any digital circuit 
+								containing latches or memory elements.
+							</p>
+
+							<p>
+								Single-event latchup is triggered when a heavy ion causes current to flow unregulated between components on 
+								an integrated circuit. When PMOS and NMOS transistors are integrated into the same area of a silicon substrate, 
+								they can form a parasitic or undesired circuit element (called a thyristor) if struck by an energetic ion. A 
+								thyristor is an interconnected n-p-n and p-n-p bipolar transistor; the current amplified by the n-p-n transistor 
+								supplies the p-n-p transistor, which in turn supplies it back to the n-p-n transistor, creating a feedback loop. 
+								When an energetic particle traverses the region of a CMOS integrated circuit containing the parasitic 
+								transistors, it can generate enough current to trigger the thyristor, if this happens the effected portion of 
+								the CMOS integrated circuit will be driven into what is called &#8220;latchup.&#8221;
+							</p>
+
+							<center>
+								<img class="nocaption" src="./res/FigureE12.gif" />
+								<div style="color: #48DAC1;">
+								<p>
+									Figure E12: Current is generated in a p-n junction exposed to transient radiation. It can be modeled as a 
+									transient current source in parallel with a diode.
+								</p>
+								</div>
+							</center>
+							
+							<p>
+								As long as the power supply maintains the voltage equal to or greater than the thyristor "holding" voltage, 
+								the latchup condition remains. The entire integrated circuit must be powered down to correct the condition. 
+								In many cases, the current is sufficient to burn out the transistors or metallization in the latchup path, 
+								permanently damaging the circuit (a phenomenon known as single-event burnout). The outcome depends on the 
+								circuit design, the geometry, and the presence of any current-limiting resistances. This serious problem makes 
+								it very difficult to use most commercial integrated circuits in an environment where heavy-particle radiation 
+								may be encountered. Bipolar integrated circuits are particularly sensitive to latchup.
+							</p>
+							
+							<p>
+								Other single-event phenomena are even more complex. For example, in certain MOS transistors, the gate oxide 
+								can be ruptured by the passage of a cosmic ray. While not completely understood, this so-called single-event 
+								gate rupture may be caused by a combination of charge-multiplicative breakdown and injection of charges into 
+								the gate oxide.
+							</p>
+							
+						</div>
+						<div id="pager"></div>
+						
+						
+						<div class="post">
+							<h2>Neutron or Proton Damage</h2>
+							
+							<p>
+								When highly energetic neutrons or protons penetrate the crystal lattice of a semiconductor, such as silicon, 
+								atoms can get displaced through several mechanisms. For example, the incident particle can transfer some of 
+								its energy to the silicon nucleus, and if enough energy is transferred (approximately 25 electron volts), the 
+								nucleus gets knocked out of position. This is called elastic scattering, and the freed silicon atom can lose 
+								energy through ionization or by displacing other atoms. Inelastic scattering can also occur, where the struck 
+								nucleus absorbs the neutron or proton and then reemits it at a lower energy along with a gamma ray. The 
+								displacements caused by this process are essentially microscopic crystal imperfections that interfere with the 
+								orderly flow of charges from the source to the drain.
+							</p>
+							
+							<p>
+								The resulting crystal lattice contains voids where the silicon atoms were knocked out of position and clusters 
+								where they came to rest. These sites, known as traps or recombination centers, respectively, can be a source of 
+								problems in some semiconductor devices. For example, a bipolar-junction transistor functions as a current 
+								amplifier. A p-n junction is the place where a p-type material meets an n-type material. There are two types of 
+								bipolar-junction transistors&#8212;n-p-n and p-n-p&#8212;which are created by sandwiching semiconductor of one 
+								doping type between two other layers of the opposite type.
+							</p>
+							
+							<p>
+								The principle of operation of bipolar transistors is by charge-carrier diffusion, which is different from the 
+								MOS transistor, whose principle of operation is by drift. In an n-p-n bipolar transistor, electrons are emitted 
+								by the emitter n-type layer into a middle material known as the base, where they diffuse to the collector n-type 
+								layer at the opposite side. If the transistor were perfect, all the electrons that traverse the middle material 
+								would be collected. In actuality, some are lost through recombination with holes. The transistor gain is 
+								therefore defined as the amount of current that reaches the collector compared with the amount that recombines 
+								with the base.
+							</p>
+							
+							
+							
+							<center><div class="figure">
+								<a href="./res/FigureE13.gif" rel=lightbox title="Figure E13">
+								<img class="figure" src="./res/FigureE13.gif" /></a>
+								</div>
+								<div style="color: #48DAC1;">
+								<p>
+									Figure E13: Operation of a bipolar junction transistor. Electrons are emitted at one end, diffuse through the 
+									middle material (the base), and are eventually collected. If the transistor were perfect, all the emitted 
+									electrons would be collected; however, some are lost through recombination with holes in the base.
+								</p>
+							</div></center>
+							
+							<p>
+								When the transistor is exposed to neutrons or protons, displacement damage and new recombination centers are 
+								created. This increases the likelihood that electrons will recombine with holes in the base material. Higher 
+								neutron or proton fluxes give rise to higher rates of recombination and lower transistor gain. Eventually, 
+								the transistor fails because its gain drops too low to provide amplification. This is the dominant failure 
+								mode in bipolar integrated circuits.
+							</p>
+							
+							<p>
+								Bipolar-junction transistors are also sensitive to total ionizing dose. The phenomenon is similar to that 
+								observed in MOS transistors, where an unwanted conducting channel is formed adjacent to the surfaces of the 
+								field oxide. These channels cause unwanted current that can eventually cause device failure. Similarly, MOS 
+								transistors are somewhat sensitive to displacement damage. Some of the charges are scattered by the damage 
+								sites, and the transistors exhibit a loss of conductance and an increase in noise. These degradations are 
+								themselves capable of causing circuit failures.
+							</p>
+							
+						</div>
+						<div id="pager"></div>
+						
+						
+						
+						
+						<div class="post">
+							<h3>Sources</h3>
+							<p>
+								What Could Go Wrong? The Effects of Ionizing Radiation on Space Electronics<br />
+								John Scarpulla and Allyson Yarbrough<br />
+								<a href="http://www.aero.org/publications/crosslink/summer2003/03.html">http://www.aero.org/publications/crosslink/summer2003/03.html</a>
+							</p>
+
+							<p>
+								ESA Radiation: satellites&#8217; unseen enemy
+								<a href="http://www.esa.int/SPECIALS/Space_Engineering/SEM6W34TBPG_0.html">http://www.esa.int/SPECIALS/Space_Engineering/SEM6W34TBPG_0.html</a>
+							</p>
+							
+							<p>
+								Designing Integrated Circuits to Withstand Space Radiation<br />
+								Donald C. Mayer and Ronald C. Lacoe<br />
+								<a href="http://www.aero.org/publications/crosslink/summer2003/06.html">
+								http://www.aero.org/publications/crosslink/summer2003/06.html</a>
+							</p>
+							
+							<p>
+								Sandia National Laboratories<br />
+								<a href="http://prod.sandia.gov/techlib/access-control.cgi/2007/077157.pdf">http://prod.sandia.gov/techlib/access-control.cgi/2007/077157.pdf</a><br />
+								<a href="http://prod.sandia.gov/techlib/access-control.cgi/1998/988237.pdf">http://prod.sandia.gov/techlib/access-control.cgi/1998/988237.pdf</a><br />
+							</p>
+
+						</div>
+						<div id="pager"></div>
+						
+						
+						
+					</div>
+
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="../environment.html">Overview</a></li>
+						<li><a href="./meteorite.html">Micrometeorite Environment</a></li>
+							<li class="children">Characterization</li>
+							<li class="children">Impact Probability</li>
+							<li class="children">Damage Models</li>
+							<li class="children">Conclusion</li>
+						<li><a href="./radiation.html">Radiation Environment</a></li>
+							<li class="children">Summary</li>
+							<li class="children">Interplanetary Space and Galactic Cosmic Rays</li>
+							<li class="children">Solar Wind and Solar Energetic Particles</li>
+							<li class="children">Earth's Magnetosphere and the Van Allen Belts</li>
+							<li class="children">Current Research</li>
+							<li class="children">Extreme Value Analysis</li>
+							<li class="children">Acknowledgements</li>
+						<li><a id="active" href="./hardware.html">Effects on Hardware</a></li>
+							<li class="children">Major Concerns</li>
+							<li class="children">Total Dose Effects</li>
+							<li class="children">Single-Event Effects</li>
+							<li class="children">Neutron or Proton Damage</li>
+						<li><a href="./reliability.html">Impact on Mission and Reliability</a></li>
+							<li class="children">Motivation</li>
+							<li class="children">Performance Implications</li>
+							<li class="children">Reliability</li>
+							<li class="children">Future Issues</li>
+							<li class="children">Summary</li>
+							<li class="children">Conclusion</li>
+						<li><a href="./resources.html">Resources</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li>|<a href="../../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../../comms/communications.html">Communications</a></li>
+					<li>|<a href="../../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

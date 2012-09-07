@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>MICROWAVE POWER DESIGN</title>
+
+	<link rel="stylesheet" type="text/css" href="../../layout/style.css">
+	<link rel="stylesheet" href="../../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../js/prototype.js"></script>
+	<script type="text/javascript" src="../../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../../js/lightbox.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a>Earth Station Design</a>
+					<ul>
+						<li><a href="../../esd/collector.html">Overview</a></li>
+						<li><a href="../../esd/design.html">Design</a></li>
+						<li><a href="../../esd/safety.html">Safety</a></li>
+						<li><a href="../../esd/link.html">Link Budget</a></li>
+						<li><a href="../../esd/rectenna.html">Rectenna Efficiency</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a class="active">The Satellites</a>
+					<ul>
+						<li><a href="../../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../../sat/environment.html">Space Environment</a></li>
+						<li><a href="../../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../../comms/communications.html">Overview</a></li>
+						<li><a href="../../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>MICROWAVE POWER DESIGN</h1>
+
+
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							<h2>Magnetron Directional Amplifier</h2>
+							<p>
+								Although magnetrons are used in conventional microwave-oven products, they can also 
+								be used for the Space Solar Power application to produce microwave power. 
+								High DC power that will be harvested by the Photovoltaic cells from solar energy 
+								will serve as a DC input to the magnetron. The magnetron will do the DC to RF 
+								conversion; the generated microwave power will be fed to the satellite dish antenna 
+								through a waveguide or coaxial cable which will direct the power back to the earth 
+								station’s rectenna. 
+							</p>
+							
+							<p>
+								In order to provide a better performance in terms of phase and amplitude tracking 
+								of the generated RF wave, a type of magnetron (enhanced conventional magnetron) 
+								for a satellite power system is used: the Magnetron Directional Amplifier (MDA). 
+							</p>
+							
+							<p>
+								The MDA is a conventional magnetron with the addition of a passive directional 
+								device (a ferrite circulator or a “magic –T”), the output sensors and compensators 
+								for both amplitude and phase tracking, and the feedback control circuits. As shown 
+								in the DOE/NASA study, the magic-T passive directional device is preferable for 
+								Space application. The conventional magnetron used for the MDA is composed of 
+								pyrographite cooling fin, the buck-boost coil, the magnetron tuner with solenoid, 
+								and the samarium cobalt magnets. 
+							</p>
+							
+							<p>
+								Moreover, the MDA has a very high electrical efficiency as reported during the 
+								comprehensive DOE/NASA study of the satellite power system.
+							</p>
+							
+							<p>
+								Some other benefits of the magnetron directional amplifier are listed below:
+							</p>
+							
+							<ul>
+								<li>Phase and amplitude tracking capability of magnetron directional amplifier</li>
+								<li>Exceptionally high signal to noise ratio</li>
+								<li>Long life based because of low operating temperature of the carburized thoriated tungsten cathode</li>
+							</ul>
+							
+							<div style="float:right;" class=figure >
+								<a href="./res/FigureM5.jpg" rel=lightbox title="Figure M5. Overall View of Phase and Amplitude Control Circuits on Test Bed">
+								<img class=figure src="./res/FigureM5.jpg" /></a>
+								<p>Figure M5. Overall View of Phase and Amplitude Control Circuits on Test Bed</p>
+							</div>
+							
+							<p>
+								The phase and amplitude tracking control circuit is shown in 
+								<a href="./res/FigureM5.jpg" rel=lightbox title="Figure M5. Overall View of Phase and Amplitude Control Circuits on Test Bed">Figure M5</a>. It was 
+								demonstrated that the phase and amplitude tracking control could be made accurately 
+								and simultaneously.  Two actuators were used for both amplitude output and phase 
+								output control. The actuator used to control the amplitude output is a buck-boost 
+								coil which adds to or subtracts from the residual magnetic field produced by the 
+								permanent magnets. The actuator used to control the phase output is a motor driven 
+								mechanical phase shifter which compensates for the phase shift in the magnetron 
+								directional amplifier that is caused by various environmental and operational factors. 
+								The experimental equipment showed a capability in phase tracking to within + to -1degree 
+								and output amplitude tracking to within + and -30%. The experiment also showed that 
+								it was possible to get a 20db gain. 
+							</p>
+							
+							<p>
+								The phase and amplitude tracking require the need of auxiliary DC power. This auxiliary 
+								DC power can be obtained from rectifying a portion of the generated microwave power 
+								with Schottky barrier diodes made with GaAS material. The same concept used for the 
+								AC to DC conversion at the rectenna can be used here to produce the auxiliary power. 
+							</p>
+							
+							<p>
+								Another experiment was also conducted on the magnetron directional amplifier, this time to 
+								measure noise levels with respect to signal levels. The noise emission from a microwave 
+								oven magnetron used in a directional amplifier was determined. The amplifier exhibited a 
+								spectral noise density of 196dB below the carrier, which is a very low level of noise. 
+							</p>
+							
+							
+							<p>
+								Multiple magnetron directional amplifiers can be put out together to form what is called a 
+								power module. <a href="./res/FigureM6.jpg" rel=lightbox title="Figure M6">Figure M6</a> 
+								shows two power amplifiers, where each power amplifier is composed of 
+								four radiating units. In turn, each radiating unit is composed of two magnetrons.
+							</p>
+							
+							<center>
+								<a href="./res/FigureM6.jpg" rel=lightbox title="Figure M6. Figure M6. Assembly Architecture for the Magnetron Directional Amplifier in the Antenna Subarray. Two Power Modules are Shown. Microwave Drive and all References and Auxiliary Power are Inserted from the "Backbone" of the Subarray. The Array has Two Distinct Temperature Zones. The Top is Used to Radiate the Heat. The Bottom is Used for Mounting of Solid State Components">
+								<img style="width:50%" class=nocaption class=figure src="./res/FigureM6.jpg" /></a>
+							</center>
+							<p style="padding-left:50px; padding-right:50px;">
+								<em>Figure M6. Assembly Architecture for the Magnetron Directional Amplifier in the Antenna Subarray.
+								Two Power Modules are Shown. Microwave Drive and all References and Auxiliary Power are Inserted from 
+								the "Backbone" of the Subarray. The Array has Two Distinct Temperature Zones. The Top is Used to 
+								Radiate the Heat. The Bottom is Used for Mounting of Solid State Components</em>
+							</p>
+							
+							
+							<p>
+								The power modules can prove to be very useful in that each radiating unit can intake DC power to 
+								produce RF microwave power. Since our photovoltaics array will provide a 10GW output, this DC power 
+								can be evenly split among the radiating units where each will perform its own DC to RF power conversion. 
+								This is beneficial because designing a magnetron which can intake 10GW DC input power is not easy to 
+								implement. A network of waveguides can then be used to combine all generated microwave power by each 
+								radiating unit. The combined microwave power can delivered to the transmitting space antenna to 
+								transmit the power back to earth. 
+							</p>
+							
+							<p>
+								The size of the current radiating unit is 77.48cm by 36.83cm. 
+							</p>
+							
+						</div>
+						<div id="pager"></div>
+						
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="../power.html">Background</a></li>
+						<li><a id="active" href="./magnetron.html">Magnetron Directional Amplifier</a></li>
+						<li><a href="./references.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li>|<a href="../../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../../comms/communications.html">Communications</a></li>
+					<li>|<a href="../../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

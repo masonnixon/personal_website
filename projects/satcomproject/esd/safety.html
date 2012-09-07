@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>EARTH STATION SAFETY</title>
+
+	<link rel="stylesheet" type="text/css" href="../layout/style.css">
+	<link rel="stylesheet" href="../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../js/prototype.js"></script>
+	<script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../js/lightbox.js"></script>
+	
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a class="active">Earth Station Design</a>
+					<ul>
+						<li><a href="../esd/collector.html">Overview</a></li>
+						<li><a href="../esd/design.html">Design</a></li>
+						<li><a href="../esd/safety.html">Safety</a></li>
+						<li><a href="../esd/link.html">Link Budget</a></li>
+						<li><a href="../esd/rectenna.html">Rectenna Efficiency</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a>The Satellites</a>
+					<ul>
+						<li><a href="../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../sat/environment.html">Space Environment</a></li>
+						<li><a href="../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../comms/communications.html">Overwiew</a></li>
+						<li><a href="../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>SAFETY CONSIDERATIONS</h1>
+
+						<div class="post">
+							<h2>Bio-effects</h2>
+							<p>
+								It will be necessary to implement a phase control system that may detect if the uplink 
+								pilot beam transmitter at the rectenna is shut off, i.e. the beam will be refocused. 
+								This will drop the peak intensity of the beam at the ground level to 0.003 mW/cm<sup>2</sup> 
+								and the beam width greatly increases.<sup><a href="#footnote">[11]</a></sup> This defocused beam is less than 
+								the ambient level of television transmission in an average city (0.01mW/cm<sup>2</sup>). 
+								According to the DOE/NASA 1980 study, preliminary investigations show that no major 
+								impairment of avian, animal, or humans or their ecosystems would be sustained outside of 
+								the rectenna sites. The site locations should be remote and in sparsely populated areas. 
+								Also, a note in the study is made on attempts of terrorists to refocus the beam with 
+								malicious intent. To thwart these attempts, in the phasing system of the rectenna, 
+								sensors will be employed to detect any large unexpected changes in incident power density. 
+								This would cause the transmitting antenna to cease normal operations and/or redirect the beam.<sup><a href="#footnote">[11]</a></sup>
+							</p>
+
+							<h2>Atmosphere</h2>
+							<p>
+								According to the study referenced above in Bio-Effects, most of the waste heat would be 
+								dissipated in space and the amount that is not would be close to the heat produced by 
+								suburban developments near large cities. Localized effects would depend on the 
+								environmental surroundings and it is unclear what the specific effects would be. 
+								Regional weather patterns should not be affected at the rectenna sites and current 
+								power generating systems with comparable capacities to our system would have a greater 
+								affect than the Space Solar Power system described here.<sup><a href="#footnote">[11]</a></sup> Ozone changes due 
+								to excess heat generation globally averaged would have negligible affects. 
+							</p>
+
+							<h2>Aircraft</h2>
+							<p>
+								There will be issues with current communications systems, but these can be mitigated by 
+								various techniques. These issues would be most prominent around the area of the 
+								collector (within 100km) and in space. Filters and shielding would be required by other 
+								satellite systems and ground equipment. Also, high flying aircraft may need additional 
+								shielding for their communications electronics.<sup><a href="#footnote">[11]</a></sup>
+							</p>
+							
+						</div>
+						<div id="pager"></div>
+						
+						<a name="footnote"></a>
+						<div class="footnote">
+							<ol start="11">
+								<li>1980 DOE/NASA Study <a href="http://www.nss.org/settlement/ssp/library/1980DOESPS-QuestionsAndAnswersAboutSPS.pdf">
+									http://www.nss.org/settlement/ssp/library/1980DOESPS-QuestionsAndAnswersAboutSPS.pdf</a></li>
+							</ol>
+						</div>
+						
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="./collector.html">Overview</a></li>
+						<li><a href="./design.html">Design</a></li>
+							<li class='children'>Antenna Design</li>
+							<li class='children'>Array Design</li>
+						<li><a id="active" href="./safety.html">Safety Considerations</a></li>
+							<li class='children'>Bio-effects</li>
+							<li class='children'>Atmosphere</li>
+							<li class='children'>Aircraft</li>
+						<li><a href="./link.html">Link Budget Considerations</a></li>
+						<li><a href="./rectenna.html">Rectenna Efficiency</a></li>
+						<li><a href="./references.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li>|<a href="../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../comms/communications.html">Communications</a></li>
+					<li>|<a href="../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>SATELLITE SUBSYSTEMS</title>
+
+	<link rel="stylesheet" type="text/css" href="../../layout/style.css">
+	<link rel="stylesheet" href="../../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../js/prototype.js"></script>
+	<script type="text/javascript" src="../../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../../js/lightbox.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a>Earth Station Design</a>
+					<ul>
+						<li><a href="../../esd/collector.html">Overview</a></li>
+						<li><a href="../../esd/design.html">Design</a></li>
+						<li><a href="../../esd/safety.html">Safety</a></li>
+						<li><a href="../../esd/link.html">Link Budget</a></li>
+						<li><a href="../../esd/rectenna.html">Rectenna Efficiencies</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a class="active">The Satellites</a>
+					<ul>
+						<li><a href="../../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../../sat/environment.html">Space Environment</a></li>
+						<li><a href="../../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../../comms/communications.html">Overview</a></li>
+						<li><a href="../../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>THERMAL</h1>
+
+						<div class="post">
+							<p>
+								The thermal subsystem is responsible for maintaining the temperatures of various components at 
+								an appropriate level. The solar panels are capable of operating effectively in a temperature 
+								range from -150 to 110 degrees Celsius. The absorbed heat was taken as the wasted solar energy 
+								(not converted to electricity) and found to be about 9.4 GW absorbed by a single satellite’s 
+								solar panels. The heat radiated by the dark side of the solar panels was calculated using the 
+								Stefan-Boltzmann equation shown below.
+							</p>
+							
+							<center><img src="./res/EqnS2.png" class="nocaption" /></center>
+							
+							<p>
+								In order to radiate all the heat absorbed away from the solar panels and maintain it at a safe 
+								operating temperature, the emissivity of the rear side of the panels had to be chosen to be 
+								relatively high. Thus, the rear side of the solar panels must be coated with a highly radiative 
+								substance, commonly used as an inexpensive and passive method of thermal control. Given that 
+								the satellite orbit is designed to keep the satellite in view of the Sun at almost all times, 
+								the lower values of the operational temperature range do not have to be considered; 
+								the primary concern is elimination of excess heat.
+							</p>
+							
+							<div style="float:right;" class="figure">
+								<a href="./res/FigureS4.jpg" rel="lightbox" 
+									title="Figure S4. Active heat pipe system (from www.nasa.gov)">
+									<img class="figure" src="./res/FigureS4.jpg" /></a>
+								<p>
+									Figure S4.Active heat pipe system (from www.nasa.gov)
+								</p>
+							</div>
+							
+							
+							<p>
+								The main satellite body must also have methods of thermal control. The use of 
+								internal electronics which produce waste heat complicates the issue beyond the 
+								simple consideration necessary for the solar panels. However, a combination of 
+								passive multilayer insulation over any components that must be kept warm, in 
+								conjunction with active heat piping to route excess heat to radiators, 
+								should provide sufficient thermal control. 
+							</p>
+							
+							
+						</div>
+						<div id="pager"></div>
+						
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="../hardware.html">Overview</a></li>
+						<li><a href="./ADAC.html">ADACs</a></li>
+						<li><a href="./keeping.html">Station Keeping</a></li>
+						<li><a id="active" href="./thermal.html">Thermal</a></li>
+						<li><a href="./power.html">Power</a></li>
+						<li><a href="./GNC.html">Guidance, Navigation, and Control</a></li>
+						<li><a href="./References.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li>|<a href="../../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../../comms/communications.html">Communications</a></li>
+					<li>|<a href="../../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

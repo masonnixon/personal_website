@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>EARTH STATION DESIGN</title>
+
+	<link rel="stylesheet" type="text/css" href="../layout/style.css">
+	<link rel="stylesheet" href="../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../js/prototype.js"></script>
+	<script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../js/lightbox.js"></script>
+	
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a class="active">Earth Station Design</a>
+					<ul>
+						<li><a href="../esd/collector.html">Overview</a></li>
+						<li><a href="../esd/design.html">Design</a></li>
+						<li><a href="../esd/safety.html">Safety</a></li>
+						<li><a href="../esd/link.html">Link Budget</a></li>
+						<li><a href="../esd/rectenna.html">Rectenna Efficiency</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a>The Satellites</a>
+					<ul>
+						<li><a href="../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../sat/environment.html">Space Environment</a></li>
+						<li><a href="../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../comms/communications.html">Overwiew</a></li>
+						<li><a href="../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>GROUND STATION COLLECTOR</h1>
+
+
+						<!-- -------------SECTION BODY------------- -->
+						<div class="post">
+							<h2>Overview</h2>
+							<div style="float:right;" class="figure">
+								<a href="./res/FigureG1.jpg" rel=lightbox title="Figure G1. The Very Large Array">
+								<img class="figure" src="./res/FigureG1.jpg" /></a>
+								<p>Figure G1.<sup><a href="#footnote">[10]</a></sup> The Very Large Array</p>
+							</div>
+							<p>
+								The ground collector requires a large gain receiver capable of steering toward the 
+								transmitter satellite. A mechanical steering seems impractical for the size of a 
+								single dish, so a uniform circular antenna array with varying current phase excitation 
+								of each element will be utilized for beam steering. Utilizing an array over a single 
+								antenna can lead to dramatic improvements in directivity, the ability to shape the 
+								radiating pattern, and by controlling either the amplitude or phase of the current 
+								driving each array element, one can steer the beam <sup><a href="#footnote">[12]</a></sup>. The array will be a 
+								narrow band receiver, with the only required frequency to be at the ISM (industrial, 
+								scientific, and medical) band of 24 to 24.250GHz (i.e. 12.50mm &le; &lambda; &le; 12.37mm). 
+								The individual antennas will be parabolic reflectors utilizing the Cassegrain architecture.  
+								The beam steering will be performed using the communications system to locate the 
+								position of the satellite transmitter and the signal of interest (SOI). This will be 
+								performed using the Minimum Mean Square Error (MMSE) beamforming algorithm.
+							</p>
+						</div>
+						<div id="pager"></div>
+						
+						<a name="footnote"></a>
+						<div class="footnote">
+							<ol start="10">
+								<li>
+									Parabolic dish image: <a href="http://en.wikipedia.org/wiki/File:USA.NM.VeryLargeArray.02.jpg">
+										http://en.wikipedia.org/wiki/File:USA.NM.VeryLargeArray.02.jpg</a>
+								</li>
+							</ol>
+							<ol start=12>
+								<li>Wentworth, S. (2007). <em>Applied electromagnetics : early transmission lines approach</em>. Hoboken, NJ: John Wiley.</li>
+							</ol>
+						</div>
+						
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a id="active" href="./collector.html">Overview</a></li>
+						<li><a href="./design.html">Design</a></li>
+							<li class='children'>Antenna Design</li>
+							<li class='children'>Array Design</li>
+						<li><a href="./safety.html">Safety Considerations</a></li>
+							<li class='children'>Bio-effects</li>
+							<li class='children'>Atmosphere</li>
+							<li class='children'>Aircraft</li>
+						<li><a href="./link.html">Link Budget Considerations</a></li>
+						<li><a href="./rectenna.html">Rectenna Efficiency</a></li>
+						<li><a href="./references.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li>|<a href="../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../comms/communications.html">Communications</a></li>
+					<li>|<a href="../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

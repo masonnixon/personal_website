@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>EARTH STATION RECTENNA</title>
+
+	<link rel="stylesheet" type="text/css" href="../layout/style.css">
+	<link rel="stylesheet" href="../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../js/prototype.js"></script>
+	<script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../js/lightbox.js"></script>
+	
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a class="active">Earth Station Design</a>
+					<ul>
+						<li><a href="../esd/collector.html">Overview</a></li>
+						<li><a href="../esd/design.html">Design</a></li>
+						<li><a href="../esd/safety.html">Safety</a></li>
+						<li><a href="../esd/link.html">Link Budget</a></li>
+						<li><a href="../esd/rectenna.html">Rectenna Efficiency</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a>The Satellites</a>
+					<ul>
+						<li><a href="../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../sat/environment.html">Space Environment</a></li>
+						<li><a href="../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../comms/communications.html">Overwiew</a></li>
+						<li><a href="../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>RECTENNA EFFICIENCY</h1>
+
+
+						<div class="post">
+							<p>
+								The rectenna topology that will be used for the SSP project is shown in 
+								<a href="./res/FigureG5.jpg" rel=lightbox title="Figure G5. Rectenna Topology">Figure G5.</a>
+								Instead of a half wave dipole, we will use a dish antenna which will collect the 
+								received power from the satellite. 
+							</p>
+							
+							<p>
+								For operation at 24.125GHz, we will use a completely monolithic approach in which 
+								the diodes and the all the circuitry are built up on a Gallium Arsenide (GaAs) 
+								substrate which we know can function at frequencies in excess of 250GHz. 
+							</p>
+							
+							<center><div class="figure">
+								<a href="./res/FigureG5.jpg" rel=lightbox title="Figure G5. Rectenna Topology">
+								<img class="figure" src="./res/FigureG5.jpg" /></a>
+								<p>Figure G5. Rectenna Topology</p>
+							</div></center>
+							
+							<p>
+								The design of the monolithic rectenna at 20GHz consists of two parts. The first 
+								part is to make the Schottky Barrier diode on the GaAs substrate so that it can 
+								be properly connected to the microwave circuit. This is shown in 
+								<a href="./res/FigureG6.jpg" rel=lightbox title="Figure G6. Diagram Illustrating the Schottky Barrier Diode Rectifier Portion of the GaAs Monolithic Structure for a Rectenna Element">
+								Figure G6</a>.
+								The second part is the construction of the microwave circuit. The microwave circuit is 
+								composed of patterned conductors on the GaAs substrate. Those patterned conductors 
+								will be used at DC bus bars to collect rectified power. The conductors could be 
+								made out of copper or gold, to achieve higher conductivity. The thickness of the 
+								conductor will depends on the frequency of operation. Since we are using 24.125GHz, 
+								a thickness of about 85.1microns (double the skin depth).
+							</p>
+							
+							<div style="float:right;" class="figure">
+								<a href="./res/FigureG7.jpg" rel=lightbox 
+									title="Figure G7. Cutaway View of Rectenna Element Construction in Region of Capacitor for Low-Pass Filter Section">
+								<img class="figure" src="./res/FigureG7.jpg" /></a>
+								<p>Figure G7. Cutaway View of Rectenna Element Construction in Region of Capacitor for Low-Pass Filter Section</p>
+							</div>
+							<div class="figure">
+								<a href="./res/FigureG6.jpg" rel=lightbox 
+									title="Figure G6. Diagram Illustrating the Schottky Barrier Diode Rectifier Portion of the GaAs Monolithic Structure for a Rectenna Element">
+								<img class="figure" src="./res/FigureG6.jpg" /></a>
+								<p>Figure G6. Diagram Illustrating the Schottky Barrier Diode Rectifier Portion 
+									of the GaAs Monolithic Structure for a Rectenna Element</p>
+							</div>
+							
+							<p>
+								Multiple rectenna circuits realized as shown in 
+								<a href="./res/FigureG7.jpg" rel=lightbox 
+									title="Figure G7. Cutaway View of Rectenna Element Construction in Region of Capacitor for Low-Pass Filter Section">
+								Figure G7</a> and connected to 
+								the receiving antenna dish through waveguides. Assuming that there is N 
+								number of rectennas, each rectenna will receive:
+							</p>
+							
+							<center>
+								<img class="nocaption" src="./res/EqnG1.png" />
+							</center>
+							
+							
+							<p>
+								<a href="#footnote">[15]</a> suggests that a DC power output density of 3 to 10KW of DC power per 
+								square meter could be achieved using monolithic rectennas as our approach 
+								in rectifying the received microwave power. From this, we deducted that 
+								a 100000 to 333333.33 square meter rectenna array would be enough to produce 
+								at least 1GW of electric power and deliver it to the Earth power grid. 
+							</p>
+
+							<p>
+								The DC to DC power conversion can achieved with a total possible 
+								efficiency of 76%. This can efficiency result can be expected if 
+								a good matching of components can be realized <a href="#footnote">[14]</a>.
+							</p>
+							
+							<p>
+								At high frequencies such as 24.125GHz, we can expect the efficiencies 
+								for the microwave system to lower than at lower frequencies. Weather 
+								condition such as rain can cause degradation in the power efficiency 
+								of the microwave system at 24.125GHz. Moreover, at such frequencies 
+								(24.125GHz), attenuation due to ionosphere is less tolerant than 
+								at lower frequencies.
+							</p>
+
+						</div>
+						<div id="pager"></div>
+
+						<a name="footnote"></a>
+						<div class="footnote">
+							<ol start="14">
+								<li>W. C. Brown and E. Eugene Eves, "Beamed Microwave Power Transmission and its Application to Space," IEEE</li>
+								<li>W. C. Brown, "RECTENNA TECHNOLOGY PROGRAM: Ultra Light 2.45 GHz Rectenna and 20 GHz Rectenna," NASA</li>
+							</ol>
+						</div>
+						
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="./collector.html">Overview</a></li>
+						<li><a href="./design.html">Design</a></li>
+							<li class='children'>Antenna Design</li>
+							<li class='children'>Array Design</li>
+						<li><a href="./safety.html">Safety Considerations</a></li>
+							<li class='children'>Bio-effects</li>
+							<li class='children'>Atmosphere</li>
+							<li class='children'>Aircraft</li>
+						<li><a href="./link.html">Link Budget Considerations</a></li>
+						<li><a id="active" href="./rectenna.html">Rectenna Efficiency</a></li>
+						<li><a href="./references.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li>|<a href="../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../comms/communications.html">Communications</a></li>
+					<li>|<a href="../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

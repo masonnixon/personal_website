@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>SATELLITE SUBSYSTEMS</title>
+
+	<link rel="stylesheet" type="text/css" href="../../layout/style.css">
+	<link rel="stylesheet" href="../../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../js/prototype.js"></script>
+	<script type="text/javascript" src="../../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../../js/lightbox.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a>Earth Station Design</a>
+					<ul>
+						<li><a href="../../esd/collector.html">Overview</a></li>
+						<li><a href="../../esd/design.html">Design</a></li>
+						<li><a href="../../esd/safety.html">Safety</a></li>
+						<li><a href="../../esd/link.html">Link Budget</a></li>
+						<li><a href="../../esd/rectenna.html">Rectenna Efficiencies</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a class="active">The Satellites</a>
+					<ul>
+						<li><a href="../../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../../sat/environment.html">Space Environment</a></li>
+						<li><a href="../../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a>Communications</a>
+					<ul>
+						<li><a href="../../comms/communications.html">Overview</a></li>
+						<li><a href="../../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>STATION KEEPING</h1>
+
+						<div class="post">
+							<div style="float:left;" class="figure">
+								<a href="./res/FigureS3.jpg" rel="lightbox" 
+									title="Figure S3. Apollo 11 launch on the Saturn V in 1969, illustrating the reliability of chemical rocketry">
+									<img class="figure" src="./res/FigureS3.jpg" /></a>
+								<p>
+									Figure S3. Apollo 11 launch on the Saturn V in 1969, illustrating the reliability of chemical rocketry
+								</p>
+							</div>
+							
+							<p>
+								The stationkeeping subsystem is necessary to maintain the desired orbit. Various forces 
+								(primarily due the Moon, Sun, the Earth’s oblateness, aerodynamic, gravitational, and 
+								magnetic forces) would alter the orbit over time, degrading the mission effectiveness. 
+								It is necessary to correct for these forces, though relatively infrequently, as the orbital 
+								degradation is slow. Due to the need for infrequent but relatively powerful thrusting 
+								maneuvers exerted at a single point on the satellite (the center of mass), a chemical 
+								rocket was chosen for stationkeeping maneuvers. Chemical rockets are inexpensive due to 
+								their simplicity and long engineering history (dating back several decades) and are 
+								thus also relatively reliable.
+							</p>
+							
+							<p>
+								The stationkeeping analysis was performed to account for an average and worst case scenario, 
+								given a circular 600 km altitude orbit. The different scenarios derive from the fact that 
+								the atmospheric density and therefore aerodynamic forces on the satellite fluctuate 
+								drastically based on solar activity. Both scenarios provide a very conservative estimate on 
+								the needed fuel mass for stationkeeping, as the real orbits are highly elliptical, approaching 
+								Earth at an altitude of approximately 600 km only at perigee. The fuel mass was calculated 
+								using the basic chemical rocket equation:
+							</p>
+							
+							<center><img src="./res/EqnS1.png" class="nocaption" /></center>
+							
+							<p>
+								It was found that approximately 10,200 kg of fuel is needed yearly to perform stationkeeping 
+								maneuvers. As it is not possible to maintain fuel tanks large enough to sustain the satellite 
+								orbit over the entire mission lifetime, periodic resupply missions will be carried out to 
+								resupply the satellite with necessary fuel.
+							</p>
+								
+						</div>
+						<div id="pager"></div>
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="../hardware.html">Overview</a></li>
+						<li><a href="./ADAC.html">ADACs</a></li>
+						<li><a id="active" href="./keeping.html">Station Keeping</a></li>
+						<li><a href="./thermal.html">Thermal</a></li>
+						<li><a href="./power.html">Power</a></li>
+						<li><a href="./GNC.html">Guidance, Navigation, and Control</a></li>
+						<li><a href="./References.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li>|<a href="../../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../../comms/communications.html">Communications</a></li>
+					<li>|<a href="../../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

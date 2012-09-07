@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<title>COMMUNICATIONS HARDWARE</title>
+	
+	<link rel="stylesheet" type="text/css" href="../layout/style.css">
+	<link rel="stylesheet" href="../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../js/prototype.js"></script>
+	<script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../js/lightbox.js"></script>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a>Earth Station Design</a>
+					<ul>
+						<li><a href="../esd/collector.html">Overview</a></li>
+						<li><a href="../esd/design.html">Design</a></li>
+						<li><a href="../esd/safety.html">Safety</a></li>
+						<li><a href="../esd/link.html">Link Budget</a></li>
+						<li><a href="../esd/rectenna.html">Rectenna Efficiency</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a>The Satellites</a>
+					<ul>
+						<li><a href="../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../sat/environment.html">Space Environment</a></li>
+						<li><a href="../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a class="active">Communications</a>
+					<ul>
+						<li><a href="../comms/communications.html">Overwiew</a></li>
+						<li><a href="../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>HARDWARE DESCRIPTION</h1>
+
+
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							<h2>Antennae</h2>
+							<p>
+								On the satellite, phased-element array antennas were chosen to provide the 
+								communications link. A phased-element array is an array of antennas in which the 
+								relative phases of the respective signals feeding the antennas are varied in such a 
+								way that the effective radiation pattern of the array is reinforced in a desired 
+								direction and suppressed in undesired directions.<sup><a href="#footnote">[1]</a></sup> 
+								While both hardware and software are relatively complex compared to a large dish 
+								antenna, the advantages that phased arrays provide far outweigh its complexity. 
+								The two main advantages of array antennas for the IRIS communications subsystem are:
+							</p>
+							
+							<ul>
+								<li>Electronically configurable gain pattern</li>
+								<li>Fault tolerance</li>
+							</ul>
+							
+							<p>
+								Since the array antenna is electronically controlled, the gain pattern can be 
+								manipulated to achieve beam steering.  This reduces the need for moving 
+								parts that might possibly fail as well as having a significant speed advantage over 
+								mechanical parts.  As for fault tolerance, in addition to mechanical failure, should 
+								one element in the array fail, it does not drastically hinder the antenna as a whole.
+							</p>
+
+							<center><div class="figure">
+								<a href="./res/FigureC1.png" rel="lightbox" 
+									title="Figure C1. Gain pattern from a phased-element array. [Figure Reference 1]">
+								<img class="figure" src="./res/FigureC1.png" /></a>
+								<p>Figure C1. Gain pattern from a phased-element array. [Figure Reference 1]</p>
+							</div></center>
+							
+							<p>
+								Current solutions for phased array antennas can be used even at Geostationary 
+								Earth Orbit <sup><a href="#footnote">[2]</a></sup>, providing evidence that the 
+								solution will work for our Medium Earth Orbit space solar power system.
+							</p>
+							
+							<p>
+								There is more flexibility in choosing Earth station antennae, and as such large 
+								aperature dish antennas, on the order of 2-5meters can be used to attain high
+								gain for transmission and reception.
+							</p>
+							
+						</div>
+						<div id="pager"></div>
+
+
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							<h2>Anti-jamming Capability</h2>
+							<p>
+								As another benefit of using phased-array antennas, if the system detects sources of 
+								interference or jamming, the antenna can cast a null in its beam pattern in the 
+								direction of the offending source. The current solution onboard the AEHF satellites 
+								state that this nulling capability can be done almost instantaneously and without 
+								interuption to the link.
+							</p>
+							
+							<center><div class="figure">
+								<a href="./res/FigureC2.png" rel="lightbox" 
+									title="Figure C2. Nulling a jamming signal and beamforming. [Figure Reference 2]">
+								<img class="figure" src="./res/FigureC2.png" /></a>
+								<p>Figure C2.  Nulling a jamming signal and beamforming. [Figure Reference 2]</p>
+							</div></center>
+						
+						</div>
+						<div id="pager"></div>
+						
+						<a name="footnote"/>
+						<div class="footnote">
+							<ol>
+								<li>
+									Warshowsky, J.; Kulisan, C.; Vail, D.; , "20 GHz phased array antenna for GEO satellite 
+									communications," <em>MILCOM 2000. 21st Century Military Communications Conference Proceedings</em>, 
+									vol.2, no., pp.1187-1191 vol.2, 2000 doi: 10.1109/MILCOM.2000.904114
+								</li>
+								<li>
+									<em>phased array</em>, "Telecommunications: Glossary of Telecommunication Terms," 1996
+								</li>
+							</ol>
+								
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="./communications.html">Overview</a></li>
+						<li><a href="./hardware.html" id="active">Hardware Description</a></li>
+							<li class='children'>Antennae</li>
+							<li class='children'>Anti-jamming Capability</li>
+						<li><a href="./stack.html">Communications Network Stack</a></li>
+							<li class='children'>Physical Layer: Modulation</li>
+							<li class='children'>Link Layer: Error Correction</li>
+							<li class='children'>Transport Layer: Encryption</li>
+						<li><a href="./references.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li>|<a href="../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../comms/communications.html">Communications</a></li>
+					<li>|<a href="../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+	<title>NETWORK STACK</title>
+
+	<link rel="stylesheet" type="text/css" href="../layout/style.css">
+	<link rel="stylesheet" href="../css/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="../js/prototype.js"></script>
+	<script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"></script>
+	<script type="text/javascript" src="../js/lightbox.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	<div id="site">
+		<!-- -------------TOP MENU------------- -->
+		<div id="header">
+			<ul id="menu">
+
+				<!-- HOME -->
+				<li class="home">
+					<a href="../index.html">Home</a>
+				</li>
+
+				<!-- Earth Station Design -->
+				<li>
+					<a>Earth Station Design</a>
+					<ul>
+						<li><a href="../esd/collector.html">Overview</a></li>
+						<li><a href="../esd/design.html">Design</a></li>
+						<li><a href="../esd/safety.html">Safety</a></li>
+						<li><a href="../esd/link.html">Link Budget</a></li>
+						<li><a href="../esd/rectenna.html">Rectenna Efficiency</a></li>
+					</ul>
+				</li>
+
+				<!-- Satellites -->
+				<li>
+					<a>The Satellites</a>
+					<ul>
+						<li><a href="../sat/orbit.html">Orbital Parameters</a></li>
+						<li><a href="../sat/hardware.html">Subsystems</a></li>
+						<li><a href="../sat/environment.html">Space Environment</a></li>
+						<li><a href="../sat/power.html">Microwave Power</a></li>
+					</ul>
+				</li>
+
+				<!-- Communnications -->
+				<li>
+					<a class="active">Communications</a>
+					<ul>
+						<li><a href="../comms/communications.html">Overwiew</a></li>
+						<li><a href="../comms/hardware.html">Hardware Description</a></li>
+						<li><a href="../comms/stack.html">Network Stack</a></li>
+					</ul>
+				</li>
+
+				<!-- Mission Logistics -->
+				<li>
+					<a>Mission Logistics</a>
+					<ul>
+						<li><a href="../logs/timeline.html">Project Timeline</a></li>
+						<li><a href="../logs/budget.html">Budget</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+
+
+
+
+
+
+
+		<div id="content">
+			<div id="wrapper">
+
+				<!-- -------------MAIN CONTENT------------- -->
+				<div id="main">
+					<div id="posts">
+						<!-- -------------PAGE TITLE------------- -->
+						<h1>COMMUNICATIONS NETWORK STACK</h1>
+						
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							<h2>Physical Layer: Modulation</h2>
+							
+							<p>
+								The data rate for the communications link is 2.0Mbps, providing adequate bandwidth 
+								for high speed telemetry as well as command and diagnostics. The digital modulation 
+								used in the IRIS communications system is Guassian filtered Minimum Shift Keying 
+								(GMSK).  The bandwidth&mdash;bit&ndash;time product for the system's Gaussian 
+								low pass filter is 0.125. Frequency-Hopping Spread Spectrum (FHSS) is also applied 
+								to the carrier. The uplink operates in the Q-V band in the Extremely High Frequency 
+								(EHF) spectrum range at 44Ghz.  The satellite downlink operates in the Super High 
+								Frequency (SHF) spectrum range at 20Ghz. Required bandwidth in both uplink and 
+								downlink is 500Mhz.
+							</p>
+							
+							<h3>Frequency Selection</h3>
+								<p>
+									With Ku and Ka bands being mostly saturated <sup><a href="#footnote">[3]</a></sup>, 
+									there is a shift from centimeter wavelengths to the millimeter bands.  For our 
+									uplink, we use a 44Ghz EHF carrier frequency and a 20Ghz downlink carrier frequency. 
+									This is similar to the currently operational Advanced Extremely High Frequency 
+									(AEHF) MILSATCOM system.<sup><a href="#footnote">[4]</a></sup> Since we are not 
+									providing communications access to as broad a user-base, IRIS system requires only 
+									500Mhz of bandwidth compared to the 1-2Ghz involved in the AEHS satellites.
+								</p>
+							
+							
+							<h3>Gaussian Minimum Shift Keying</h3>
+								<p>
+									GMSK is a variation of Minimum Shift Keying (MSK).  MSK is a continuous phase (CP) 
+									Frequency Shift Keying (FSK) modulation scheme where there carrier has no phase 
+									discontinuities and frequency shifts occur at the carrier zero crossings.  
+									As a CP modulation scheme, the constant-envelope yields high power efficiency, 
+									and its independence from amplitude allows for use of class C, non-linear 
+									amplifiers. The downside to MSK modulation is its poor power spectral density.  
+									With a modulation index of 0.5, where the difference in shift frequencies is one 
+									half the data rate, it cannot realize data rates approaching the RF channel bandwidth.
+								</p>
+								<p>
+									To make the output power spectrum more compact, a premodulation Gaussian low pass 
+									filter is applied to the input data impulse train before being applied to the MSK 
+									modulation scheme.  Figure C3 shows examples of the Gaussian LPF impulse response 
+									with respect to a chosen bandwidth&mdash;bit&ndash;time (BT) product.
+								</p>
+									
+								<center><div class="figure">
+									<a href="./res/FigureC3.png" rel="lightbox" 
+										title="Figure C3. Gaussian LPF response for different BT products. [Figure Reference 3]">
+									<img  class="figure" src="./res/FigureC3.png" /></a>
+									<p>Figure C3. Gaussian LPF response for different BT products. [Figure Reference 3]</p>
+								</div></center>
+
+								
+								<p>
+									The half power cutoff frequency is related to datarate via the following equation:
+								</p>
+
+								<center><div class="figure">
+									<img class="equation" src="./res/EqnC1.png" />
+									<p>Equation C1. Relationship between channel bitrate, BT product, and channel half power
+									bandwidth. [Figure Reference 3]</p>
+								</div></center>
+								
+								<p>
+									Choosing the BT product is a tradeoff between demodulation complexity and power 
+									spectra efficiency.  A smaller BT product increases power spectra efficiency with 
+									faster rolloff (as seen in Figure C4), but increases demodulation complexity due to 
+									greater intersymbol interference (ISI), as seen in the extended bit period in Figure C3.
+									We choose a BT value of 0.125 as there are implementations of demodulators that 
+									have been proven to handle the high ISI.
+								</p>
+								
+								<center><div class="figure">
+									<a href="./res/FigureC4.png" rel="lightbox" 
+										title="Figure C4. Power spectral densities for MSK and various GMSK BT products [Figure Reference 4]">
+									<img class="figure" src="./res/FigureC4.png" /></a>
+									<p>Figure C4. Power spectral densities for MSK and various GMSK BT products [Figure Reference 4]</p>
+								</div></center>
+								
+								<p>
+									Since the RF bandwidth is controlled by the Gaussian LPF, using Equation C1, our 
+									chosen BT value of 0.125, and our target data rate of 2.0Mbps, the -3dB bandwidth for 
+									our uncoded GMSK signal is 250kHz.
+								</p>
+								
+								<p>
+									Despite the increased demodulation complexity, GMSK was chosen because it provides
+									the following advantages:<sup><a href="#footnote">[5]</a></sup>
+									<ul>
+										<li>Bandwidth efficiency</li>
+										<li>Power spectra efficiency</li>
+										<li>Independence from power amplifier linearity</li>
+									</ul>
+								</p>
+								
+								<p>
+									A block diagram for a GMSK coherent modulator is shown in Figure C5.
+								</p>
+								
+								<center><div class="figure">
+									<a href="./res/FigureC5.png" rel="lightbox" 
+										title="Figure C5. Block Diagram for a coherent GMSK modulator [Figure Reference 3]">
+									<img class="figure" src="./res/FigureC5.png" /></a>
+									<p>Figure C5. Block Diagram for a coherent GMSK modulator [Figure Reference 3]</p>
+								</div></center>
+								
+							<h3>Frequency-Hopping Spread Spectrum</h3>
+								<p>
+									Spread spectrum techniques provide a protection layer against jamming and 
+									interception.  The IRIS communications subsystem employs frequency-hopping 
+									as its method of spread spectrum.  With the improved bandwidth efficiency 
+									provided by the GMSK modulation scheme, greater flexibility is provided when 
+									hopping the carrier frequency inside of the reserved band.  More channels within 
+									the reserved band equates to higher chances that the pseudo-random sequence
+									of frequency hops cannot be intercepted. For modulation, the block diagram in 
+									Figure C4 need only be modified at the local oscillator to support a 
+									frequency hopping scheme.
+								</p>
+								
+						</div>
+						<div id="pager"></div>
+
+
+
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							<h2>Link Layer: Error Correction</h2>
+							<p>
+								In order to achieve performance closer to the Shannon Limit, the theoretical 
+								maximum information transfer rate of a channel for a particular noise level,
+								a Rate 1/2 Turbo code is applied to the uncoded data stream. This allows
+								low bit error rates of 10<sup>-6</sup> to within 1dB of the Shannon Limit.
+								<sup><a href="#footnote">[6]</a></sup>
+							</p>
+							
+						</div>
+						<div id="pager"></div>
+						
+						
+						
+						<!-- -------------SECTION------------- -->
+						<div class="post">
+							<h2>Transport Layer: Encryption</h2>
+							<p>
+								As the final level of security, encryption is necessary to further prevent 
+								any unwanted access or control to the harvesting satellites.  The current NSA
+								Suite B Cryptography guidelines <sup><a href="#footnote">[7]</a></sup> state that 
+								a 256bit Elliptic Curve Digital Signature Algorithm (ECDSA) should be used to 
+								protect classified information at the SECRET level.
+							</p>
+							<p>
+								The IRIS project chooses to use ECDSA-384 as its method of data encryption. The main 
+								rationale for using a larger sized elliptic curve group is precautionary. As compute 
+								processing capabilities increase, the time taken to crack a given encryption key 
+								decreases.  The standard practice of cycling to new encryption keys should be practiced 
+								during the lifetime of the system as well.
+							</p>
+							<p>
+								If in the future, the employed encryption algorithm is compromised, there is always
+								the possibility of changing to a different algorithm as decryption is performed
+								at the software level.
+							</p>
+								
+						
+						</div>
+						<div id="pager"></div>
+						
+						<a name="footnote"/>
+						<div class="footnote">
+							<ol start=3>
+								<li>
+									Cianca, E.; Rossi, T.; Yahalom, A.; Pinhasi, Y.; Farserotu, J.; Sacchi, C.; , 
+									"EHF for Satellite Communications: The New Broadband Frontier," 
+									<em>Proceedings of the IEEE</em> , vol.99, no.11, pp.1858-1881, Nov. 2011
+									doi: 10.1109/JPROC.2011.2158765
+								</li>
+								<li>
+									"Advanced Extremely High Frequency", Factsheet, pdf, Lockheed Martin, Aug 2011,
+									http://www.lockheedmartin.com/data/assets/ssc/aehf/C10010_AEHFFactsheet_V282911.pdf
+								</li>
+								<li>
+									Laster, J. D.,  "Robust GMSK Demodulation Using Demodulator Diversity and BER Estimation",
+									Ph.D. dissertation, Dept. Elect. Eng., Virginia Polytechnic Institute, Blacksburg, VA, 1997
+								<li>
+									Mitchell, G., "Investigation of Hamming, Reed-Solomon, and Turbo Forward Error
+									Correcting Codes", <em>Army Research Laboratory</em>, Adelphi, MD, Jul 2009
+								</li>
+								<li>
+									"NSA Suite B Cryptography - NSA/CSS", <em>National Security Agency</em>, Nov 2010, 
+									http://www.nsa.gov/ia/programs/suiteb_cryptography/
+								</li>
+							</ol>
+						</div>
+						
+					</div>
+				</div>
+
+
+
+
+				<!-- -------------SIDE BAR------------- -->
+				<div id="sidebar">
+				<img src="../layout/sidebar_header.png" alt="IRIS" width="332" height="128" class="quote" style="left: 671px; top: 308px"><br/>
+
+					<!-- -------------SIDE BAR LINKS------------- -->
+					<ul id="categories">
+						<li><a href="./communications.html">Overview</a></li>
+						<li><a href="./hardware.html">Hardware Description</a></li>
+							<li class='children'>Antennae</li>
+							<li class='children'>Anti-jamming Capability</li>
+						<li><a href="./stack.html" id="active">Communications Network Stack</a></li>
+							<li class='children'>Physical Layer: Modulation</li>
+							<li class='children'>Link Layer: Error Correction</li>
+							<li class='children'>Transport Layer: Encryption</li>
+						<li><a href="./references.html">References</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+
+		<!-- -------------FOOTER------------- -->
+		<div id="footer">
+			<div id="bottom_menu">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li>|<a href="../esd/collector.html">Earth Station Design</a></li>
+					<li>|<a href="../sat/hardware.html">Satellites</a></li>
+					<li>|<a href="../comms/communications.html">Communications</a></li>
+					<li>|<a href="../logs/timeline.html">Mission Logistics</a></li>
+				</ul>
+			</div>
+
+			<div class="copyright">
+				Copyright 2011 © All rights reserved. Design by <a href="http://www.bestfreetemplates.info/" target="_blank" title="best free templates">BFT</a> 
+				modified by Austin Scheidemantel, Tri Pho
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
