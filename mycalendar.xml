@@ -5,12 +5,15 @@
   <range from="11/24/2008" to="11/28/2008" state="holiday" catagory="">Thanksgiving Day Holiday Week</range>
   <day date="9/1/2008" state="holiday" catagory="">Labor Day</day>
   <day date="10/1/2008" state="event" catagory="">Job Fair- Engineering and Technology at Auburn held by &lt;a href=&quot;http://www.auburn.edu/academic/provost/undergrad_studies/career/events/stuexpof08.php&quot;&gt;Career Development Services&lt;/a&gt;</day>
+  <day date="11/17/2012" state="event" catagory="">My wedding day!</day>
+  <day date="05/05/2013" state="event" catagory="">Spring Graduation &lt;a href=&quot;http://www.registrar.gatech.edu/home/calendar.php&quot;&gt;GA Tech Calendar&lt;/a&gt;</day>
   <recurrent date="11/7/2008" type="year" monthday="7" month="11" pattern="1" state="holiday" catagory="">My birthday</recurrent>
   <recurrent date="11/19/2008" type="year" monthday="19" month="11" pattern="1" state="holiday" catagory="">Roni and My anniversary</recurrent>
   <day date="12/16/2008" state="event" catagory="">End of Fall 2008 Semester</day>
   <recurrent date="12/24/2008" type="year" monthday="24" month="12" pattern="1" state="holiday" catagory="">Christmas Eve</recurrent>
   <recurrent date="12/25/2008" type="year" monthday="25" month="12" pattern="1" state="holiday" catagory="">Christmas Day</recurrent>
   <recurrent date="12/31/2008" type="year" monthday="31" month="12" pattern="1" state="holiday" catagory="">New Year's Eve</recurrent>
+  <recurrent date="01/23/2012" type="year" monthday="23" month="01" pattern="1" state="holiday" catagory="">Roni's birthday</recurrent>
 
 <coffeecupcalendar version="4.0">
 
